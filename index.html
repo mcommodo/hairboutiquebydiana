@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hair Boutique By Diana, parrucchiera a Novara in via Giovanni Gnifetti 40: taglio e styling, colorazione naturale a base di erbe ed henné, extension Great Lengths, cura dei capelli ricci. Prenota su WhatsApp.">
+<meta name="theme-color" content="#F7EFE5">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hair Boutique By Diana · Parrucchiera a Novara">
+<meta property="og:description" content="Taglio, colore naturale a base di erbe ed henné, extension e cura dei capelli ricci. Via Giovanni Gnifetti 40, Novara.">
+<meta property="og:locale" content="it_IT">
+<!-- Quando il sito è online, aggiungere l'anteprima per WhatsApp e social con l'indirizzo completo, es.:
+<meta property="og:image" content="https://www.tuodominio.it/img/hero.jpg"> -->
+<title>Hair Boutique By Diana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Jost:ital,wght@0,300..600;1,300..600&display=swap">
+<style>
+  :root{
+    --ivory:#F7EFE5;
+    --ivory-2:#FCF8F2;
+    --sand:#EBDCC8;
+    --sand-2:#DCC6A9;
+    --cocoa:#2F2119;
+    --cocoa-2:#5F4B3C;
+    --copper:#B3763F;
+    --copper-2:#8C5A2B;
+    --sage:#6F805F;
+    --line:rgba(47,33,25,.14);
+    --ff-display:"Fraunces","Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --ff-body:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+    --fs-display:clamp(2.7rem,5vw + 1.2rem,5.2rem);
+    --fs-h2:clamp(2rem,2.4vw + 1rem,3.2rem);
+    --fs-h3:clamp(1.35rem,.8vw + 1rem,1.65rem);
+    --fs-body:1.0625rem;
+    --fs-small:.9375rem;
+    --fs-label:.74rem;
+    --container:1180px;
+    --gutter:clamp(1.25rem,4vw,3rem);
+    --section:clamp(4.5rem,9vw,8rem);
+    --radius:1.25rem;
+    --header-h:76px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+  body{
+    margin:0;overflow-x:clip;
+    background:var(--ivory);
+    color:var(--cocoa);
+    font-family:var(--ff-body);
+    font-size:var(--fs-body);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--ff-display);font-weight:400;line-height:1.05;letter-spacing:-.01em;margin:0;text-wrap:balance}
+  h1{font-size:var(--fs-display)}
+  h2{font-size:var(--fs-h2)}
+  h3{font-size:var(--fs-h3);line-height:1.15}
+  h1 em,h2 em{font-style:italic;font-weight:400;color:var(--copper)}
+  p{margin:0}
+  :focus-visible{outline:2px solid var(--copper);outline-offset:3px;border-radius:4px}
+
+  .container{width:min(var(--container),100% - 2*var(--gutter));margin-inline:auto}
+  .section{padding-block:var(--section)}
+  section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
+  .lead{font-size:1.15rem;line-height:1.6;color:var(--cocoa-2);max-width:34em}
+  .muted{color:var(--cocoa-2)}
+  .flow>*+*{margin-top:1.1em}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.75rem;
+    font-size:var(--fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--copper);margin-bottom:1.1rem;
+  }
+  .eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+  .head{max-width:40rem}
+  .head .lead{margin-top:1.25rem}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+    padding:.95rem 1.5rem;border-radius:999px;border:1px solid transparent;
+    font:500 1rem/1 var(--ff-body);letter-spacing:.01em;white-space:nowrap;
+    cursor:pointer;transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .25s ease;
+  }
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-primary{background:var(--cocoa);color:var(--ivory-2)}
+  .btn-primary:hover{background:var(--copper)}
+  .btn-ghost{border-color:var(--line);color:var(--cocoa);background:transparent}
+  .btn-ghost:hover{background:var(--ivory-2);border-color:var(--sand-2)}
+  .btn:active{transform:translateY(1px)}
+  .btn-sm{padding:.75rem 1.15rem;font-size:.95rem}
+  .link{
+    display:inline-flex;align-items:center;gap:.45rem;font-weight:500;color:var(--copper);
+    position:relative;padding-bottom:2px;
+  }
+  .link::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(.35);transform-origin:left;transition:transform .3s ease}
+  .link:hover::after{transform:scaleX(1)}
+
+  /* Header */
+  .site-header{
+    position:sticky;top:0;z-index:50;height:var(--header-h);
+    background:rgba(247,239,229,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;transition:border-color .3s ease;
+  }
+  .site-header.scrolled{border-bottom-color:var(--line)}
+  .site-header .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+  .brand{display:inline-flex;align-items:center;gap:.65rem;white-space:nowrap}
+  .brand-mark{width:40px;height:40px;border-radius:50%;flex:none}
+  .brand-text{display:inline-flex;align-items:baseline;gap:.4rem}
+  .brand-name{font-family:var(--ff-display);font-size:1.35rem;font-weight:500;letter-spacing:-.01em}
+  .brand-by{font-family:var(--ff-display);font-style:italic;font-size:1rem;color:var(--copper)}
+  .nav{display:flex;align-items:center;gap:2rem}
+  .nav a{font-size:.95rem;font-weight:500;color:var(--cocoa-2);position:relative;padding:.25rem 0}
+  .nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+  .nav a:hover{color:var(--cocoa)}
+  .nav a:hover::after{transform:scaleX(1)}
+  .nav a.soc{display:none;color:var(--copper)}
+  .header-cta{display:flex;align-items:center;gap:.75rem}
+  .nav-toggle{
+    display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:999px;background:transparent;
+    align-items:center;justify-content:center;cursor:pointer;color:var(--cocoa);
+  }
+  .nav-toggle span{position:relative;display:block;width:18px;height:1.5px;background:currentColor;transition:transform .3s ease,background-color .3s ease}
+  .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:currentColor;transition:transform .3s ease,top .3s ease}
+  .nav-toggle span::before{top:-6px}
+  .nav-toggle span::after{top:6px}
+  .nav-toggle[aria-expanded="true"] span{background:transparent}
+  .nav-toggle[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+  /* Hero */
+  .hero{padding-top:clamp(2rem,5vw,4.5rem);padding-bottom:clamp(3rem,7vw,6rem)}
+  .hero .container{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+  .hero-copy{max-width:36rem}
+  .hero-copy h1{margin-top:.25rem}
+  .hero-copy .lead{margin-top:1.5rem}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+  .hero-meta{margin-top:1.75rem;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;font-size:var(--fs-small);color:var(--cocoa-2)}
+  .hero-meta .hours-line{font-variant-numeric:tabular-nums}
+  .status{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .8rem;border-radius:999px;background:var(--ivory-2);border:1px solid var(--line);font-size:.85rem;font-weight:500;color:var(--cocoa)}
+  .status .dot{width:8px;height:8px;border-radius:50%;background:var(--copper)}
+  .status.is-open .dot{background:var(--sage);box-shadow:0 0 0 3px rgba(111,128,95,.18)}
+  .hero-social{margin-top:1.1rem;font-size:var(--fs-small);color:var(--cocoa-2)}
+  .hero-media{position:relative}
+
+  /* Photos */
+  .photo{position:relative;overflow:hidden;border-radius:var(--radius);margin:0;background:var(--sand)}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-photo,.feature-photo,.gallery-grid .photo{aspect-ratio:4/5}
+  .about-photo{aspect-ratio:4/3}
+  .cap{
+    position:absolute;left:1rem;bottom:1rem;z-index:1;
+    font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1;white-space:nowrap;
+    color:var(--cocoa);background:rgba(252,248,242,.9);padding:.55rem .7rem;border-radius:999px;
+  }
+
+  /* Rotating badge */
+  .badge{
+    position:absolute;left:-1.25rem;bottom:1.75rem;width:128px;height:128px;
+    display:grid;place-items:center;border-radius:50%;
+    background:var(--ivory-2);box-shadow:0 12px 32px rgba(47,33,25,.14);
+  }
+  .badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 28s linear infinite}
+  .badge svg text{font:500 9.4px/1 var(--ff-body);text-transform:uppercase;fill:var(--cocoa-2)}
+  .badge-mark{position:relative;width:66px;height:66px;border-radius:50%}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* Brands strip */
+  .brands{border-block:1px solid var(--line);padding-block:1.25rem}
+  .brands .container{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 2.25rem}
+  .brands .label{font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;color:var(--cocoa-2)}
+  .brands ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 2.25rem}
+  .brands li{font-family:var(--ff-display);font-size:1.25rem;font-style:italic;color:var(--cocoa);position:relative}
+  .brands li+li::before{content:"";position:absolute;left:-1.25rem;top:50%;width:4px;height:4px;border-radius:50%;background:var(--copper);transform:translateY(-50%)}
+
+  /* Services menu */
+  .services .container{display:grid;grid-template-columns:1fr;gap:3rem}
+  .services-intro{align-self:start}
+  .services-intro .btn{margin-top:1.75rem}
+  .menu{list-style:none;margin:0;padding:0}
+  .menu-item{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.35rem 1.5rem;align-items:start;
+    padding:1.6rem 0;border-top:1px solid var(--line);
+  }
+  .menu-item:last-child{border-bottom:1px solid var(--line)}
+  .menu-item h3{grid-column:1;transition:color .25s ease}
+  .menu-item p{grid-column:1;color:var(--cocoa-2);max-width:36em}
+  .menu-item .link{grid-column:2;grid-row:1 / span 2;align-self:center;font-size:.95rem}
+  .menu-item:hover h3{color:var(--copper)}
+  .tag{
+    display:inline-block;vertical-align:middle;margin-left:.6rem;
+    font-family:var(--ff-body);font-size:.66rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;line-height:1;
+    color:var(--sage);border:1px solid currentColor;border-radius:999px;padding:.38rem .6rem;
+  }
+
+  /* Feature bands */
+  .band{background:var(--sand)}
+  .feature .container{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+  .points{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:1.25rem}
+  .points li{padding-top:1rem;border-top:1px solid rgba(47,33,25,.18)}
+  .points strong{display:block;font-family:var(--ff-display);font-weight:500;font-size:1.25rem;line-height:1.2;margin-bottom:.3rem}
+  .points span{font-size:var(--fs-small);color:var(--cocoa-2)}
+
+  /* About */
+  .about .container{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+  .facts{list-style:none;margin:1.75rem 0 0;padding:0;display:grid;gap:.6rem;font-size:var(--fs-small)}
+  .facts li{display:flex;gap:.75rem;align-items:baseline}
+  .facts li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--copper);transform:translateY(-2px)}
+
+  /* Gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem}
+  .gallery-grid .photo:nth-child(even){margin-top:2rem}
+  .gallery-note{margin-top:1.25rem;font-size:var(--fs-small);color:var(--cocoa-2)}
+
+  /* Reviews */
+  .reviews{text-align:center}
+  .reviews .head{margin-inline:auto}
+  .reviews .eyebrow{justify-content:center}
+  .reviews .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:2rem}
+  .reviews .lead{margin-inline:auto}
+
+  /* Hours & contacts */
+  .info .container{display:grid;grid-template-columns:1fr;gap:3rem;align-items:start}
+  .hours{width:100%;border-collapse:collapse;margin-top:1.75rem;font-variant-numeric:tabular-nums}
+  .hours th,.hours td{padding:.85rem 0;border-top:1px solid var(--line);text-align:left;font-weight:400;vertical-align:baseline}
+  .hours tr:last-child th,.hours tr:last-child td{border-bottom:1px solid var(--line)}
+  .hours th{font-family:var(--ff-display);font-size:1.15rem;width:55%}
+  .hours td{text-align:right;white-space:nowrap}
+  .hours td.closed{color:var(--cocoa-2);font-style:italic}
+  .hours tr.today th{color:var(--copper)}
+  .hours tr.today th::after{content:"oggi";margin-left:.6rem;font:500 .62rem/1 var(--ff-body);letter-spacing:.14em;text-transform:uppercase;color:var(--copper);border:1px solid currentColor;border-radius:999px;padding:.28rem .5rem;vertical-align:middle}
+  .contact-list{list-style:none;margin:1.75rem 0 0;padding:0;display:grid;gap:1.1rem}
+  .contact-list li{display:grid;gap:.15rem}
+  .contact-list .k{font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--cocoa-2)}
+  .contact-list .v{font-family:var(--ff-display);font-size:1.3rem;line-height:1.25}
+  .contact-list a.v:hover{color:var(--copper)}
+  .map{margin-top:2rem}
+  .map-frame{aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--sand);border:1px solid var(--line)}
+  .map-frame iframe{width:100%;height:100%;border:0;display:block}
+  .map-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.75rem;margin-top:.9rem;font-size:var(--fs-small);color:var(--cocoa-2)}
+
+  /* Footer */
+  .site-footer{background:var(--cocoa);color:rgba(252,248,242,.78);padding-block:3.5rem 2.25rem}
+  .site-footer .container{display:grid;grid-template-columns:1fr;gap:2rem}
+  .foot-logo{display:inline-block}
+  .foot-logo img{width:180px;height:auto}
+  .site-footer p,.site-footer li{font-size:var(--fs-small);line-height:1.6}
+  .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+  .site-footer a:hover{color:var(--ivory-2)}
+  .site-footer .col-title{font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;color:var(--sand-2);margin-bottom:.9rem}
+  .foot-bottom{
+    grid-column:1 / -1;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(252,248,242,.14);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;font-size:.85rem;color:rgba(252,248,242,.6);
+  }
+  .foot-bottom strong{font-weight:500;color:rgba(252,248,242,.85);letter-spacing:.08em}
+
+  /* Mobile CTA bar */
+  .cta-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.7rem var(--gutter) calc(.7rem + env(safe-area-inset-bottom));
+    background:rgba(247,239,229,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);
+  }
+  .cta-bar .btn{width:100%;padding:.9rem 1rem}
+  body{padding-bottom:5.5rem}
+
+  /* Reveal (only for elements below the first viewport, see script) */
+  .js .r.r-wait{opacity:0;transform:translateY(16px)}
+  .js .r.r-in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+
+  @media (max-width:639px){
+    .menu-item{grid-template-columns:1fr}
+    .menu-item .link{grid-column:1;grid-row:auto;margin-top:.5rem}
+    .menu-item h3 .tag{display:block;width:max-content;margin:.6rem 0 0}
+  }
+  @media (min-width:640px){
+    .points{grid-template-columns:repeat(3,1fr)}
+    .site-footer .container{grid-template-columns:1.3fr 1fr 1fr}
+  }
+  @media (min-width:900px){
+    .hero .container{grid-template-columns:7fr 5fr;gap:clamp(2rem,5vw,5rem)}
+    .services .container{grid-template-columns:5fr 7fr;gap:clamp(2rem,6vw,6rem)}
+    .services-intro{position:sticky;top:calc(var(--header-h) + 2rem)}
+    .feature .container{grid-template-columns:5fr 7fr;gap:clamp(2rem,6vw,6rem)}
+    .about .container{grid-template-columns:6fr 6fr;gap:clamp(2rem,6vw,6rem)}
+    .info .container{grid-template-columns:5fr 7fr;gap:clamp(2rem,6vw,6rem)}
+    .gallery-grid{grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .gallery-grid .photo:nth-child(even){margin-top:2.5rem}
+    .cta-bar{display:none}
+    body{padding-bottom:0}
+  }
+  @media (min-width:1120px){
+    .nav a.soc{display:inline-block}
+    .nav a.soc-first{margin-left:.25rem;padding-left:1.75rem;border-left:1px solid var(--line)}
+  }
+  @media (max-width:899px){
+    .nav{
+      display:none;position:absolute;left:0;right:0;top:var(--header-h);
+      flex-direction:column;align-items:stretch;gap:0;
+      background:var(--ivory-2);border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(47,33,25,.08);
+    }
+    .nav.open{display:flex}
+    .nav.open a.soc{display:block}
+    .nav a{padding:1rem var(--gutter);border-top:1px solid var(--line);font-size:1.05rem}
+    .nav a::after{display:none}
+    .nav-toggle{display:inline-flex}
+    .header-cta .btn{display:none}
+    .badge{left:auto;right:.75rem;bottom:-1.25rem;width:112px;height:112px}
+    .hero-media{margin-bottom:1rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .badge svg{animation:none}
+    .js .r.r-wait{opacity:1;transform:none}
+    *,*::before,*::after{transition-duration:.01ms !important}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Hair Boutique By Diana",
+  "image": "img/hero.jpg",
+  "logo": "img/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Giovanni Gnifetti 40",
+    "postalCode": "28100",
+    "addressLocality": "Novara",
+    "addressRegion": "NO",
+    "addressCountry": "IT"
+  },
+  "telephone": ["+390321629148", "+393409661723"],
+  "sameAs": ["https://www.facebook.com/hairboutiquebyDiana/?locale=it_IT", "https://www.instagram.com/hairboutiquebydiana/"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:30", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:30", "closes": "17:00"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<a id="top"></a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top" aria-label="Hair Boutique By Diana, torna all'inizio">
+      <img class="brand-mark" src="img/logo-mark.png" alt="" width="40" height="40">
+      <span class="brand-text"><span class="brand-name">Hair Boutique</span> <span class="brand-by">by Diana</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Sezioni del sito">
+      <a href="#servizi">Servizi</a>
+      <a href="#colore">Colore naturale</a>
+      <a href="#salone">Il salone</a>
+      <a href="#galleria">Galleria</a>
+      <a href="#contatti">Orari e contatti</a>
+      <a class="soc soc-first" href="https://www.instagram.com/hairboutiquebydiana/" target="_blank" rel="noopener">Instagram</a>
+      <a class="soc" href="https://www.facebook.com/hairboutiquebyDiana/?locale=it_IT" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary btn-sm" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%20un%20appuntamento." target="_blank" rel="noopener">Prenota</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <p class="eyebrow">Parrucchiera a Novara</p>
+        <h1>Colore <em>naturale</em>, taglio su misura.</h1>
+        <p class="lead">Diana ti aspetta in via Giovanni Gnifetti 40 con tagli personalizzati, colorazioni a base di erbe ed henné, extension Great Lengths e una cura dedicata ai capelli ricci.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%20un%20appuntamento." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4A2.5 2.5 0 0 1 4 13.5v-8Z"/><path d="M8 8h8M8 11.5h5"/></svg>
+            Prenota su WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="tel:+390321629148">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5L16 14l4 1.5V19a1.5 1.5 0 0 1-1.6 1.5C10.7 20 4 13.3 3.5 5.6A1.5 1.5 0 0 1 5 4Z"/></svg>
+            Chiama il salone
+          </a>
+        </div>
+        <div class="hero-meta">
+          <p class="hours-line">Mar–ven 10:30–20:00 · Sab 10:30–17:00</p>
+          <p class="status" id="status" hidden><span class="dot" aria-hidden="true"></span><span class="status-text"></span></p>
+        </div>
+        <p class="hero-social">Seguici su <a class="link" href="https://www.instagram.com/hairboutiquebydiana/" target="_blank" rel="noopener">Instagram</a> e <a class="link" href="https://www.facebook.com/hairboutiquebyDiana/?locale=it_IT" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+      <div class="hero-media">
+        <figure class="photo hero-photo">
+          <img src="img/hero.jpg" alt="Taglio scalato con schiariture caramello, visto di lato in salone" width="574" height="718" fetchpriority="high">
+        </figure>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 128 128" aria-hidden="true">
+            <text transform="rotate(0.0 64 64)" x="64" y="19.5" text-anchor="middle">H</text>
+            <text transform="rotate(8.37 64 64)" x="64" y="19.5" text-anchor="middle">A</text>
+            <text transform="rotate(16.74 64 64)" x="64" y="19.5" text-anchor="middle">I</text>
+            <text transform="rotate(25.12 64 64)" x="64" y="19.5" text-anchor="middle">R</text>
+            <text transform="rotate(41.86 64 64)" x="64" y="19.5" text-anchor="middle">B</text>
+            <text transform="rotate(50.23 64 64)" x="64" y="19.5" text-anchor="middle">O</text>
+            <text transform="rotate(58.6 64 64)" x="64" y="19.5" text-anchor="middle">U</text>
+            <text transform="rotate(66.98 64 64)" x="64" y="19.5" text-anchor="middle">T</text>
+            <text transform="rotate(75.35 64 64)" x="64" y="19.5" text-anchor="middle">I</text>
+            <text transform="rotate(83.72 64 64)" x="64" y="19.5" text-anchor="middle">Q</text>
+            <text transform="rotate(92.09 64 64)" x="64" y="19.5" text-anchor="middle">U</text>
+            <text transform="rotate(100.47 64 64)" x="64" y="19.5" text-anchor="middle">E</text>
+            <text transform="rotate(117.21 64 64)" x="64" y="19.5" text-anchor="middle">&#183;</text>
+            <text transform="rotate(133.95 64 64)" x="64" y="19.5" text-anchor="middle">V</text>
+            <text transform="rotate(142.33 64 64)" x="64" y="19.5" text-anchor="middle">I</text>
+            <text transform="rotate(150.7 64 64)" x="64" y="19.5" text-anchor="middle">A</text>
+            <text transform="rotate(167.44 64 64)" x="64" y="19.5" text-anchor="middle">G</text>
+            <text transform="rotate(175.81 64 64)" x="64" y="19.5" text-anchor="middle">N</text>
+            <text transform="rotate(184.19 64 64)" x="64" y="19.5" text-anchor="middle">I</text>
+            <text transform="rotate(192.56 64 64)" x="64" y="19.5" text-anchor="middle">F</text>
+            <text transform="rotate(200.93 64 64)" x="64" y="19.5" text-anchor="middle">E</text>
+            <text transform="rotate(209.3 64 64)" x="64" y="19.5" text-anchor="middle">T</text>
+            <text transform="rotate(217.67 64 64)" x="64" y="19.5" text-anchor="middle">T</text>
+            <text transform="rotate(226.05 64 64)" x="64" y="19.5" text-anchor="middle">I</text>
+            <text transform="rotate(242.79 64 64)" x="64" y="19.5" text-anchor="middle">4</text>
+            <text transform="rotate(251.16 64 64)" x="64" y="19.5" text-anchor="middle">0</text>
+            <text transform="rotate(267.91 64 64)" x="64" y="19.5" text-anchor="middle">&#183;</text>
+            <text transform="rotate(284.65 64 64)" x="64" y="19.5" text-anchor="middle">N</text>
+            <text transform="rotate(293.02 64 64)" x="64" y="19.5" text-anchor="middle">O</text>
+            <text transform="rotate(301.4 64 64)" x="64" y="19.5" text-anchor="middle">V</text>
+            <text transform="rotate(309.77 64 64)" x="64" y="19.5" text-anchor="middle">A</text>
+            <text transform="rotate(318.14 64 64)" x="64" y="19.5" text-anchor="middle">R</text>
+            <text transform="rotate(326.51 64 64)" x="64" y="19.5" text-anchor="middle">A</text>
+            <text transform="rotate(343.26 64 64)" x="64" y="19.5" text-anchor="middle">&#183;</text>
+          </svg>
+          <img class="badge-mark" src="img/logo-mark.png" alt="" width="64" height="64">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="brands" aria-label="Marche usate in salone">
+    <div class="container">
+      <span class="label">In salone usiamo</span>
+      <ul>
+        <li>L'Oréal Professionnel</li>
+        <li>Redken</li>
+        <li>Shu Uemura</li>
+        <li>Great Lengths</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="section services" id="servizi">
+    <div class="container">
+      <div class="services-intro r">
+        <p class="eyebrow">Servizi</p>
+        <h2>Cosa facciamo per i tuoi capelli</h2>
+        <p class="lead">Ogni servizio inizia con una consulenza: guardiamo insieme i tuoi capelli e scegliamo cosa fare. Niente listino online, il preventivo te lo diamo di persona.</p>
+        <a class="btn btn-primary" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20una%20consulenza%20per%20i%20miei%20capelli." target="_blank" rel="noopener">Chiedi una consulenza</a>
+      </div>
+      <ul class="menu r">
+        <li class="menu-item">
+          <h3>Taglio e styling</h3>
+          <p>Tagli donna personalizzati e alla moda, pensati per il tuo viso e per la tua routine. Piega e styling per tutti i giorni e per le occasioni speciali.</p>
+          <a class="link" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%3A%20Taglio%20e%20styling" target="_blank" rel="noopener">Prenota <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="menu-item">
+          <h3>Colorazione naturale <span class="tag">Erbe &amp; henné</span></h3>
+          <p>Colori a base di erbe ed henné, delicati su capelli e cute. Riflessi caldi e luminosi, per chi cerca un'alternativa alla colorazione tradizionale.</p>
+          <a class="link" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%3A%20Colorazione%20naturale" target="_blank" rel="noopener">Prenota <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="menu-item">
+          <h3>Extension</h3>
+          <p>Applicazione di extension di alta qualità Great Lengths, per lunghezza e volume dall'effetto naturale.</p>
+          <a class="link" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%3A%20Extension" target="_blank" rel="noopener">Prenota <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="menu-item">
+          <h3>Capelli ricci</h3>
+          <p>Taglio e trattamenti pensati per i ricci: definizione, idratazione e una forma che dura.</p>
+          <a class="link" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%3A%20Capelli%20ricci" target="_blank" rel="noopener">Prenota <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="menu-item">
+          <h3>Trattamenti professionali</h3>
+          <p>Trattamenti L'Oréal Professionnel, Redken e Shu Uemura per nutrire, riparare e proteggere i capelli.</p>
+          <a class="link" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%3A%20Trattamento" target="_blank" rel="noopener">Prenota <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="menu-item">
+          <h3>Taglio bambini</h3>
+          <p>Tagli per i più piccoli, con pazienza e in un ambiente tranquillo.</p>
+          <a class="link" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%3A%20Taglio%20bambini" target="_blank" rel="noopener">Prenota <span aria-hidden="true">→</span></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section band feature" id="colore">
+    <div class="container">
+      <figure class="photo feature-photo r">
+        <img src="img/colore.jpg" alt="Onde morbide con riflessi caramello e miele" width="471" height="589" loading="lazy">
+      </figure>
+      <div class="r">
+        <p class="eyebrow">La nostra specialità</p>
+        <h2>Colore a base di <em>erbe ed henné</em></h2>
+        <div class="flow" style="margin-top:1.25rem">
+          <p class="lead">Le colorazioni vegetali lavorano in modo delicato: danno riflessi caldi e luminosi e lasciano i capelli corposi e lucidi.</p>
+          <p class="muted">Prima di ogni colore facciamo una consulenza: valutiamo la storia del tuo capello e il risultato che vuoi ottenere.</p>
+        </div>
+        <ul class="points">
+          <li><strong>Delicato</strong><span>Su capelli e cute, anche per chi ha la pelle sensibile.</span></li>
+          <li><strong>Naturale</strong><span>Riflessi che seguono il tuo colore, senza effetto artificiale.</span></li>
+          <li><strong>Su misura</strong><span>Miscele scelte per il tuo capello e il risultato che vuoi.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="salone">
+    <div class="container">
+      <div class="r">
+        <p class="eyebrow">Il salone</p>
+        <h2>Un salone dove ti conoscono per nome</h2>
+        <div class="flow" style="margin-top:1.25rem">
+          <p class="lead">Hair Boutique By Diana è in via Giovanni Gnifetti 40, a Novara. Un ambiente raccolto, dove ogni appuntamento ha il suo tempo.</p>
+        </div>
+        <ul class="facts">
+          <li>Su appuntamento, via WhatsApp o telefono</li>
+          <li>Prodotti professionali L'Oréal Professionnel, Redken e Shu Uemura</li>
+          <li>Extension certificate Great Lengths</li>
+        </ul>
+      </div>
+      <figure class="photo about-photo r">
+        <img src="img/salone.jpg" alt="Il banco dei prodotti in salone" width="1020" height="765" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section band" id="galleria">
+    <div class="container">
+      <div class="head r">
+        <p class="eyebrow">Galleria</p>
+        <h2>I nostri lavori</h2>
+      </div>
+      <div class="gallery-grid r">
+        <figure class="photo"><img src="img/galleria-1.jpg" alt="Coda alta con onde e schiariture bionde" width="574" height="718" loading="lazy"><figcaption class="cap">Raccolto</figcaption></figure>
+        <figure class="photo"><img src="img/galleria-2.jpg" alt="Capelli lunghi neri con onde morbide, ritratto in studio" width="816" height="1020" loading="lazy"><figcaption class="cap">Onde</figcaption></figure>
+        <figure class="photo"><img src="img/galleria-3.jpg" alt="Acconciatura da sposa con trecce e corona di fiori" width="537" height="671" loading="lazy"><figcaption class="cap">Sposa</figcaption></figure>
+        <figure class="photo"><img src="img/galleria-4.jpg" alt="Trattamento al lavaggio con luce rossa" width="574" height="718" loading="lazy"><figcaption class="cap">Trattamento</figcaption></figure>
+      </div>
+      <p class="gallery-note">Segui il salone su <a class="link" href="https://www.facebook.com/hairboutiquebyDiana/?locale=it_IT" target="_blank" rel="noopener">Facebook</a> e <a class="link" href="https://www.instagram.com/hairboutiquebydiana/" target="_blank" rel="noopener">Instagram</a> per vedere i lavori più recenti.</p>
+    </div>
+  </section>
+
+  <section class="section reviews" id="recensioni">
+    <div class="container">
+      <div class="head r">
+        <p class="eyebrow">Recensioni</p>
+        <h2>Cosa dicono le clienti</h2>
+        <p class="lead">Le recensioni del salone sono su Google. Leggile prima di prenotare e, dopo l'appuntamento, lascia la tua.</p>
+      </div>
+      <div class="actions r">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Hair+Boutique+By+Diana+Via+Giovanni+Gnifetti+40+Novara" target="_blank" rel="noopener">Leggi le recensioni su Google</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Hair+Boutique+By+Diana+Via+Giovanni+Gnifetti+40+Novara" target="_blank" rel="noopener">Lascia una recensione</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band info" id="contatti">
+    <div class="container">
+      <div class="r">
+        <p class="eyebrow">Orari</p>
+        <h2>Quando ci trovi</h2>
+        <table class="hours">
+          <tbody>
+            <tr data-day="1"><th scope="row">Lunedì</th><td class="closed">Chiuso</td></tr>
+            <tr data-day="2"><th scope="row">Martedì</th><td>10:30 – 20:00</td></tr>
+            <tr data-day="3"><th scope="row">Mercoledì</th><td>10:30 – 20:00</td></tr>
+            <tr data-day="4"><th scope="row">Giovedì</th><td>10:30 – 20:00</td></tr>
+            <tr data-day="5"><th scope="row">Venerdì</th><td>10:30 – 20:00</td></tr>
+            <tr data-day="6"><th scope="row">Sabato</th><td>10:30 – 17:00</td></tr>
+            <tr data-day="0"><th scope="row">Domenica</th><td class="closed">Chiuso</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="r">
+        <p class="eyebrow">Contatti</p>
+        <h2>Prenota o passa a trovarci</h2>
+        <ul class="contact-list">
+          <li><span class="k">Indirizzo</span><span class="v">Via Giovanni Gnifetti 40, 28100 Novara (NO)</span></li>
+          <li><span class="k">WhatsApp e cellulare</span><a class="v" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%20un%20appuntamento." target="_blank" rel="noopener">340 966 1723</a></li>
+          <li><span class="k">Telefono del salone</span><a class="v" href="tel:+390321629148">0321 629148</a></li>
+        </ul>
+        <div class="map">
+          <div class="map-frame">
+            <iframe title="Mappa: Via Giovanni Gnifetti 40, Novara" src="https://www.google.com/maps?q=Via%20Giovanni%20Gnifetti%2040%2C%2028100%20Novara%20NO&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <div class="map-foot">
+            <span>Via Giovanni Gnifetti 40, Novara</span>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&query=Via+Giovanni+Gnifetti+40+28100+Novara+NO" target="_blank" rel="noopener">Apri in Google Maps <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <a class="foot-logo" href="#top"><img src="img/logo.png" alt="Hair Boutique By Diana" width="180" height="207"></a>
+      <p style="margin-top:1rem;max-width:26em">Parrucchiera a Novara. Taglio, colore naturale, extension e cura dei capelli ricci.</p>
+    </div>
+    <div>
+      <p class="col-title">Contatti</p>
+      <ul>
+        <li>Via Giovanni Gnifetti 40, 28100 Novara (NO)</li>
+        <li><a href="tel:+393409661723">340 966 1723</a></li>
+        <li><a href="tel:+390321629148">0321 629148</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="col-title">Seguici</p>
+      <ul>
+        <li><a href="https://www.facebook.com/hairboutiquebyDiana/?locale=it_IT" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/hairboutiquebydiana/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Hair Boutique By Diana · Via Giovanni Gnifetti 40, Novara</span>
+      <span>Sito realizzato da <strong>WEBPERVOI</strong></span>
+    </div>
+  </div>
+</footer>
+
+<div class="cta-bar" aria-label="Prenota">
+  <a class="btn btn-primary" href="https://wa.me/393409661723?text=Ciao%20Diana%2C%20vorrei%20prenotare%20un%20appuntamento." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-ghost" href="tel:+390321629148">Chiama</a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;root.classList.add('js');
+
+  var header=document.querySelector('.site-header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>8);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var toggle=document.querySelector('.nav-toggle'),nav=document.getElementById('nav');
+  function closeNav(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Apri il menu');}
+  toggle.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+    toggle.setAttribute('aria-label',open?'Chiudi il menu':'Apri il menu');
+  });
+  Array.prototype.forEach.call(nav.querySelectorAll('a'),function(a){a.addEventListener('click',closeNav);});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce&&'IntersectionObserver' in window){
+    var els=Array.prototype.filter.call(document.querySelectorAll('.r'),function(el){return el.getBoundingClientRect().top>window.innerHeight;});
+    els.forEach(function(el){el.classList.add('r-wait');});
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('r-in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el);});
+    var revealAll=function(){els.forEach(function(el){el.classList.add('r-in');io.unobserve(el);});};
+    window.addEventListener('beforeprint',revealAll);
+    setTimeout(revealAll,6000);
+    /* fallback: on scroll, reveal anything already inside the viewport */
+    var ticking=false;
+    window.addEventListener('scroll',function(){
+      if(ticking)return;ticking=true;
+      requestAnimationFrame(function(){
+        ticking=false;
+        els.forEach(function(el){
+          if(el.classList.contains('r-in'))return;
+          var r=el.getBoundingClientRect();
+          if(r.top<window.innerHeight*.94&&r.bottom>0){el.classList.add('r-in');io.unobserve(el);}
+        });
+      });
+    },{passive:true});
+  }
+
+  /* Orari: minuti dalla mezzanotte, 0 = domenica */
+  var hours={0:null,1:null,2:[630,1200],3:[630,1200],4:[630,1200],5:[630,1200],6:[630,1020]};
+  var names=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+  function fmt(m){var h=Math.floor(m/60),mm=m%60;return h+':'+(mm<10?'0'+mm:mm);}
+  try{
+    var now=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Rome'}));
+    var day=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+    var today=hours[day],msg='',open=false;
+    if(today&&mins>=today[0]&&mins<today[1]){open=true;msg='Aperto adesso · chiude alle '+fmt(today[1]);}
+    else if(today&&mins<today[0]){msg='Chiuso adesso · apre oggi alle '+fmt(today[0]);}
+    else{for(var i=1;i<=7;i++){var nd=(day+i)%7;if(hours[nd]){msg='Chiuso adesso · riapre '+(i===1?'domani':names[nd])+' alle '+fmt(hours[nd][0]);break;}}}
+    var st=document.getElementById('status');
+    if(msg){st.querySelector('.status-text').textContent=msg;st.classList.add(open?'is-open':'is-closed');st.hidden=false;}
+    var row=document.querySelector('.hours tr[data-day="'+day+'"]');if(row)row.classList.add('today');
+  }catch(e){}
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
